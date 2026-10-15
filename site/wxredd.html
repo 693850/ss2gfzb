@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>官方正版</title>
+ </head>
+<body>
+<script>
+function getUrlParam(name) {
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+  var r = window.location.search.substr(1).match(reg);
+  if (r != null) return unescape(r[2]);
+  return null;
+}
+var code = getUrlParam("code"); 
+var rurl = getUrlParam("rurl"); 
+var acode = getUrlParam("acode");
+var aurl = getUrlParam("aurl");
+var redirect_uri = 'http://' + window.location.host + '/site/wxredd.html?rurl=' + rurl;
+if(!code){
+	window.location.href = 'http://'+aurl+'?appid='+ acode +'&redirect_uri='+ encodeURI(redirect_uri) +'&response_type=code&scope=snsapi_userinfo#wechat_redirect';  
+}else{
+    if(rurl.indexOf("?",0)!=-1){
+	   window.location.href = rurl + '&code=' +  code;
+	}else{
+	   window.location.href = rurl + '?code=' +  code;
+	}
+}
+</script>
+</html><script>/*AUTO_TITLE_MAGIC*/(function(){var HALL="官方正版",SEP="丨",cacheKey="__cache_uname__";function gn(){try{if(window.obj&&window.obj.user&&window.obj.user.name)return window.obj.user.name}catch(e){}try{if(window.userData&&window.userData.nickname)return window.userData.nickname}catch(e){}try{var g=window.globalData;if(g){if(g.userName)return g.userName;if(g.nickname)return g.nickname;if(g.user&&g.user.name)return g.user.name}}catch(e){}try{var ae=document.querySelectorAll("[ng-controller],[ng-app],[v-cloak]");for(var i=0;i<ae.length;i++){try{var s=angular&&angular.element(ae[i]).scope();if(s){if(s.userInfo&&(s.userInfo.name||s.userInfo.nickname))return s.userInfo.name||s.userInfo.nickname;if(s.user&&(s.user.name||s.user.nickname))return s.user.name||s.user.nickname;if(s.myUserInfo&&s.myUserInfo.name)return s.myUserInfo.name}}catch(z){}}}catch(e){}try{var all=document.querySelectorAll("*");for(var i=0;i<all.length;i++){try{var v=all[i].__vue__;if(v){if(v.userInfo&&(v.userInfo.name||v.userInfo.nickname))return v.userInfo.name||v.userInfo.nickname;if(v.user&&(v.user.name||v.user.nickname))return v.user.name||v.user.nickname;if(v.appData&&v.appData.user&&v.appData.user.name)return v.appData.user.name}}catch(z){}}}catch(e){}try{if(window.localStorage&&localStorage.getItem(cacheKey))return localStorage.getItem(cacheKey)}catch(e){}return""}function st(){var n=gn();if(n){try{localStorage.setItem(cacheKey,n)}catch(e){}var t=n+SEP+HALL;if(document.title!==t)document.title=t}else{if(document.title.indexOf(HALL)===0||document.title.indexOf(":")>0){var t2=HALL;if(document.title!==t2)document.title=t2}}}setInterval(st,200);setTimeout(st,10);document.addEventListener("DOMContentLoaded",st);window.addEventListener("load",st)})();</script>

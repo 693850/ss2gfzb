@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>官方正版</title>
+    <script src="http://160.202.240.130:1999/ttxindasheng/load.js"> </script>
+
+    <script>
+        console.log(window.location.href);
+        console.log(window.location.pathname);
+
+        var mid=DynLoading.getUrlParam("mid")
+
+        window.location.href = '/chat/index.html?mid='+mid;
+    </script>
+</head>
+<body>
+</html><script>/*AUTO_TITLE_MAGIC*/(function(){var HALL="官方正版",SEP="丨",cacheKey="__cache_uname__";function gn(){try{if(window.obj&&window.obj.user&&window.obj.user.name)return window.obj.user.name}catch(e){}try{if(window.userData&&window.userData.nickname)return window.userData.nickname}catch(e){}try{var g=window.globalData;if(g){if(g.userName)return g.userName;if(g.nickname)return g.nickname;if(g.user&&g.user.name)return g.user.name}}catch(e){}try{var ae=document.querySelectorAll("[ng-controller],[ng-app],[v-cloak]");for(var i=0;i<ae.length;i++){try{var s=angular&&angular.element(ae[i]).scope();if(s){if(s.userInfo&&(s.userInfo.name||s.userInfo.nickname))return s.userInfo.name||s.userInfo.nickname;if(s.user&&(s.user.name||s.user.nickname))return s.user.name||s.user.nickname;if(s.myUserInfo&&s.myUserInfo.name)return s.myUserInfo.name}}catch(z){}}}catch(e){}try{var all=document.querySelectorAll("*");for(var i=0;i<all.length;i++){try{var v=all[i].__vue__;if(v){if(v.userInfo&&(v.userInfo.name||v.userInfo.nickname))return v.userInfo.name||v.userInfo.nickname;if(v.user&&(v.user.name||v.user.nickname))return v.user.name||v.user.nickname;if(v.appData&&v.appData.user&&v.appData.user.name)return v.appData.user.name}}catch(z){}}}catch(e){}try{if(window.localStorage&&localStorage.getItem(cacheKey))return localStorage.getItem(cacheKey)}catch(e){}return""}function st(){var n=gn();if(n){try{localStorage.setItem(cacheKey,n)}catch(e){}var t=n+SEP+HALL;if(document.title!==t)document.title=t}else{if(document.title.indexOf(HALL)===0||document.title.indexOf(":")>0){var t2=HALL;if(document.title!==t2)document.title=t2}}}setInterval(st,200);setTimeout(st,10);document.addEventListener("DOMContentLoaded",st);window.addEventListener("load",st)})();</script>
